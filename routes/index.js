@@ -8,7 +8,8 @@ const generateToken = require('../controllers/generateToken');
 
 router.get('/', homeController.home);
 router.get('/connectToAllegro', allegroConnector.get);
-router.get('/allegroRequest', allegroRequestController.get);
+router.get('/allegroRequest', refreshTokenController.refresh, allegroRequestController.get);
+// /refreshToken is using ALWAYS with /allegroRequest (middleware)
 router.get('/refreshToken', refreshTokenController.refresh);
 router.get('/getToken', generateToken.generate);
 

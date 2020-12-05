@@ -1,0 +1,3 @@
+Z kadzdym requestem /allegroRequest odświeza się accessToken poprzez pobranie refreshTokena z bazy 
+i przez to zaktualiwoanie accessToken, inaczej accessToken ma expired na 12h. refreshToken ma expired
+na 3 msc. Później trzeba od nowa wygenerować refreshToken (poprzez /allegroConnector)
